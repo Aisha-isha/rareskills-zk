@@ -1,0 +1,33 @@
+-> Comment signer un message (ECDSA Signature) ?
+
+Hachage du message :
+On prend un message (msg) et on le hache (SHA-256) pour obtenir un nombre (h).
+
+Choix d’un nombre aléatoire k :
+On choisit (ou calcule) un nombre aléatoire secret appelé k.
+
+Calcul d’un point aléatoire R :
+On calcule R = k × G, puis on garde seulement sa coordonnée x, appelée r.
+
+Calcul du nombre de preuve s :
+On calcule ensuite :
+
+s = (k⁻¹ × (h + r × privKey)) mod n
+(k⁻¹ signifie « inverse modulo n », c’est un nombre spécial calculé mathématiquement.)
+
+La signature finale est le couple (r, s).
+
+👉 Cette signature prouve que la personne qui signe connaît la clé privée correspondante à la clé publique utilisée.
+
+-> Comment vérifier une signature (ECDSA Verify) ?
+
+On calcule à nouveau le hachage (h = hash(msg)).
+
+On calcule l’inverse modulo de s :
+s1 = s⁻¹ mod n
+
+On retrouve le point aléatoire R' :
+R' = (h × s1) × G + (r × s1) × pubKey
+On extrait la coordonnée x de R' (appelée r').
+
+Si r' = r, alors la signature est valide. Sinon, elle est invalide.

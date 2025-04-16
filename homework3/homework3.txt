@@ -1,0 +1,39 @@
+Part1: 
+Exercises for the reader
+Find a homomorphism for the following pairs of algebraic data structures. If you get stuck (or just don’t want to solve the problem), you can Google the answer or consult with a chatbot.
+
+1.Real numbers under addition to polynomials with real coefficients under addition.
+phi(a)=a.P(x)
+
+2. Polynomials with real coefficients to real numbers under addition. Hint: even though this look similar to problem 1, the function PHI will be completely unrelated to the answer for the previous problem.
+P(x) = Somme(ai*(xi^ai))
+PHI(P(x)) = Somme (ai)
+
+3. Positive real numbers greater than zero under multiplication to all real numbers under addition.
+PHI(axb)=Phi(a)+PHI(b)
+PHI(a)=ln(a)
+
+
+Part2 : ass4:
+
+I know the solution to a systems of equations
+Now you should be able to prove to me that you know the solution to in a zero knowledge fashion
+
+2x + 8y = 7944
+
+5x + 3y = 4764
+
+Assignment 4: conver the above equation to a zk proof system where you can prove to a verifier (with an agreed upon g and n) that you know the solution to an agreed upon system of equation, without revealing the solution
+
+Enc(x)=g^x mod n
+(g^a)(g^b) = g^(a+b) mod n 
+
+g^(2x)+g^(8y)=[(g^x)^2(g^y)^8] mod n = g^7944
+g^(5x)+g^(7y)=[(g^x)^5(g^y)^3] mod n = g^4764
+
+
+
+
+
+
+ring : Anneau = (Groupe abélien sous l'addition) + (Semi-groupe associatif sous la multiplication) + (distributivité)

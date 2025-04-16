@@ -1,0 +1,55 @@
+1. Let our set be real numbers. Show a binary operator that is not closed
+
+binary operator: division /
+a,b∈R^2, if b=0 then division binary operator is not closed
+
+2. Find a binary operator that is closed but not associative for real numbers
+
+binary operator: substraction -
+closed : a,b∈R^2, a-b∈R
+associative : (a-b)-c!=a-(b-c)
+
+3. What algebraic structure (group, monoid, semigroup, etc) is all even integers under addition
+
+closed : a=2k1, b=2k2 => a+b = 2k1+2k2 = 2(k1+k2)
+associative : (a+b)+c=a+(b+c)
+identity element : 0
+inverse : every even integer x∈Z , -x∈Z
+
+all even integers under addition are group.
+
+4.What algebraic structure is all odd integers under multiplication?
+
+closed : a=2k1+1, b=2k2+1 => a+b = (2k1+1)*(2k2+1) = 2k1(2k2+1)+(2k2+1)= 4k1k2+2k1+2k2+1
+associative : (a*b)*c=a*(b*c)
+identity element : 1
+inverse : every even integer x∈Z , 1/x!∈Z
+all odd integers under multiplication is a monoid.
+
+5. Let our set be 3 x 2 matrices of integers under addition. What algebraic structure is this?
+
+closed : A32+B32 is 3x2 matrices of integers under addition
+associative : (A+B)+C=A+(B+C)
+identity element : zero matrix, A+032=032+A=A
+inverse : A=(aij) => inverse -A=(-aij)
+3 x 2 matrices of integers under addition is a group.
+
+6. Suppose our set is all rational numbers Q except 0 and our binary operator is division. What algebraic structure is this?
+closed : (a/b)/(c/d) = ad/cb ∈Q-{0}
+associative : ((a/b)/(c/d))/(e/f) = (ad/cb)/(e/f) = adf/cbe
+(a/b)/((c/d)/(e/f)) = (a/b)/(cf/de) = (ade/bcf)
+not associative 
+all rational numbers Q except 0 and our binary operator is division is a magma 
+
+7. Suppose our set is 𓅔 𓆓 𓆟----------------------------
+
+a. Define a binary operator that makes it a group. You can define the binary operator’s property by constructing a table where the left two columns are the inputs and the right column is the result. Remember you need to allow that the inputs can be the same, for example (𓅔,𓅔) —> ?
+
+
+
+b. Define a binary operator that makes it *not* a group (but it should be closed). Hint: if there is no identity element, then it is not a group
+
+---------------------------------------------------------
+8. What is the size of the smallest possible group? (Remember, a group is a set, so this is asking how large the set is)
+
+one element : {1} for multiplication and {0} for addition.
