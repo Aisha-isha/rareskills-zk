@@ -1,0 +1,3 @@
+ZK starts are faster for the prover and ZK snarks are faster for the verifier.
+
+
